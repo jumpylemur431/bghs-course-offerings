@@ -1,0 +1,704 @@
+
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+* {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+  }
+  #main > nav{
+    flex: 0 0 25vw;
+    /*background: beige;*/
+  }
+  #main > nav {
+    order: -1;
+  }
+
+  footer {
+    background: #005D24;
+    width:100%;
+    height: auto;
+  }
+
+  /****************************************************************/
+
+#header {
+    background-color: #005D24;
+    width:100%;
+    height: auto;
+  }
+#header, footer, article, nav {
+    padding: 1em;
+}
+
+  /**********************************************/
+  .crest {
+    max-width: 8%;
+    height: auto;
+  }
+  
+  .logo_w_font {
+    max-width: 28%;
+    height: auto;
+  }
+
+  .menu { /* need to fix, change so padding isn't px */
+    display: flex;
+    max-width: 4%;
+    height: auto;
+    float:right;
+    padding-top: 2.4vw;
+    /* align-self: center; */ 
+  }
+
+  .classroom {
+    max-width: 100%;
+    height: auto; 
+  }
+
+  /******************************************/
+
+  h1 {
+    text-align: center;
+    color: #005D24;
+    font-size: 3vw;
+  }
+
+ .filter {
+    text-align: center;
+    color: #005D24;
+    font-size: 2.25vw;
+  }
+
+  .search {
+    text-align: right;
+    color: #005D24;
+    font-size: 2.25vw;
+  }
+
+  p {
+    color: #444444;
+    font-size: 1.4vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 1.5;
+  }
+
+
+  .filter_headers {
+    color: #444444;
+  }
+
+  /**********************************/
+
+  /* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #444444;
+    font-size: 1.2vw;
+
+  }
+
+  .filter_headers {
+    color: #444444;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.74vw;
+    width: 1.74vw;
+    min-height: 20px;
+    min-width: 20px;
+    background-color: white;
+    border: solid #444444;
+    border-radius: .35rem; /*make into vw*/
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    border: solid #FFC300;
+    
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #FFC300;
+    border: solid #FFC300;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: .486vw;
+    top: 0.208vw;
+    width: 0.347vw;
+    height: 0.694vw;
+    min-height: 5px;
+    min-width: 5px;
+    border: solid #005D24;
+    border-width: 0 .25rem .25rem 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+/* Search bar */
+
+form {
+	margin: 50px;
+}
+.search_bar {
+	outline: none;
+  float: right;
+  margin-right: auto;
+  font-family: 'Lato', sans-serif;
+}
+
+.search_bar[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+}
+.search_bar::-webkit-search-decoration,
+.search_bar::-webkit-search-cancel-button {
+	display: none; 
+}
+.search_bar[type=search] {
+	padding: 0.625vw 0.694vw 0.625vw 32px;
+	width: 30%;
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 0.0694vw #ccc;
+	border-radius: 0.347vw;
+}
+.search_bar[type=search]:focus {
+	width: 30%;
+	background-color: #c5d7cc;
+	border-color: #005d24;	
+}
+
+/** CARD **/ 
+
+.back_card, .front_card {
+    border: solid 1px #005d24;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+    width: 35%;
+    height: auto;
+    position: absolute;
+    webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+@media screen and (max-width: 985px) {
+  .back_card, .front_card {
+    border: solid 1px #005d24;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+    width: 50%;
+    height: auto;
+    position: absolute;
+    webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+}
+
+.back_card {
+    transform: perspective(1000px) rotateY(180deg);
+    background-color: #eeeeee;
+  }
+  
+.back_card.flipped {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.front_card {
+    transform: perspective(1000px) rotateY(0deg);
+}
+  
+.front_card.flipped {
+    transform: perspective(1000px) rotateY(-180deg);
+}
+
+.card_text {
+    color: #444444;
+    font-size: 1.1vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 1.5;
+}
+
+/*** course cards ***/ 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20vw 1.38vw;
+    align-items: stretch;
+  }
+  .grid .text {
+    padding: 20px;
+  }
+
+.card_title {
+    margin-top: 0; 
+    margin-bottom: 2%;
+    text-align: left;
+    color: #005D24;
+    font-size: 2vw;
+}
+
+.card_department_name {
+    margin-top: 0; 
+    margin-bottom: 2%;
+    text-align: left;
+    color: #444444;
+    font-size: 1.5vw;
+}
+
+.card_grade_credits {
+    margin-top: 3%; 
+    margin-bottom: 3%;
+    text-align: left;
+    color: #444444;
+    font-size: 1.3vw;
+}
+
+.button_desc {
+    margin-top: 2%;
+    font-family: 'Lato', sans-serif;
+    background-color: #FFEAA7;
+    border: solid 2px #FFC300;
+    color: #444444;
+    padding: .75vw 3vw;
+    text-align: center;
+    font-size: 1.3vw;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0.347vw;
+  }
+  
+  .button_desc:hover {background-color: #FFC300}
+
+  .grades{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+    flex-direction: row;
+    column-gap: 1vw;
+  }
+
+  .credits {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+    flex-direction: row;
+    column-gap: 1vw;
+  }
+
+  .filter_cards {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: solid 0.2vw #FFC300;
+    color: #005D24;
+    font-size: 1.2vw;
+    border-radius: 0.27vw;
+    height: 2.1vw;
+    width: 2.1vw; /** Need to fix **/
+  }
+
+  /*****************************/
+  .program_button {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFEAA7;
+    border: solid 2px #FFC300;
+    color: #005D24;
+    padding: .75vw 3vw;
+    text-align: center;
+    font-size: 1.5vw;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0.347vw;
+  }
+  
+  .program_button:hover {background-color: #FFC300}
+
+  .program_button_div {
+    display: flex;
+    justify-content: center; 
+  }
+
+/*****************************/
+
+    .footer_div {
+        display: flex;
+        justify-content: center;
+        margin: 0; 
+    }
+
+    .footer_p {
+        color: white;
+        font-size: 1.1vw;
+        margin-left: 5%;
+        margin-right: 5%;
+        line-height: 1.5;
+    }
+
+    .page_count {
+        margin: 0; 
+        font-size: 1.6vw; 
+    }
+
+    .pages_div {
+        margin-top: 20vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .arrow {
+        font-family : "Arial";
+        font-size: 2vw;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 .5rem 0 .5rem;
+        color: #444444;
+    }
+    .arrow_display{
+        display: flex;
+        justify-content: right;
+        margin: 0;
+    }
+    .arrow:hover {
+    color: #FFC300;
+    }
+
+
+  /****** IPAD AIR ******/
+  @media only screen and (max-device-width: 1024px) {
+    .back_card, .front_card {
+      border: solid 1px #005d24;
+      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s ease;
+      width: 70%;
+      height: auto; 
+      position: absolute;
+      webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20vw;
+    align-items: stretch;
+  }
+  .grid .text {
+    padding: 10px;
+  }
+
+  .card_grade_credits {
+    margin: 1.2%; 
+  }
+
+  }
+
+  .iphone_filter, #iphone_filter_div, .empty_iphone_space{
+    display: none; 
+  }
+
+
+
+
+
+  /****** iPhone SE  *****/
+  @media only screen and (max-device-width: 667px) {
+    p {
+      color: #444444;
+      font-size: 1.2vw;
+      margin-left: 5%;
+      margin-right: 5%;
+      line-height: 1.5;
+    }
+
+    nav {
+      display: none; 
+    }
+
+    .iphone_filter {
+      display: flex; 
+      justify-content: center;
+    }
+
+    .filter_button {
+      display:flex;
+      font-family: 'Lato', sans-serif;
+      background-color: #005D24;
+      border: solid 2px #005D24;
+      color: white;
+      padding: 1.3vw 3.4vw;
+      text-align: center;
+      margin-top:2.5%;
+      font-size: 4vw; 
+      transition: 0.3s;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 0.347vw;
+    }
+
+    /** BUTTON ***/ 
+    .program_button {
+      font-family: 'Lato', sans-serif;
+      background-color: #FFEAA7;
+      border: solid 2px #FFC300;
+      color: #005D24;
+      padding: 1.3vw 3.4vw;
+      text-align: center;
+      font-size: 4vw;
+      transition: 0.3s;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 0.347vw;
+      margin-top: 2.5%;
+    }
+
+  /**** ALL CARD STUFF ***/ 
+    .back_card, .front_card {
+      border: solid 1px #005d24;
+      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s ease;
+      width: 90%;
+      height: auto; 
+      position: absolute;
+      webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      margin-bottom: 5px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 30vw;
+    align-items: stretch;
+  }
+  .grid .text {
+    padding: 20px;
+
+  }
+
+  .empty_iphone_space {
+    display: flex;
+  }
+
+.card_title {
+  margin-top: 0; 
+  margin-bottom: 1.2%;
+  text-align: left;
+  color: #005D24;
+  font-size: 5vw;
+}
+
+.card_department_name {
+  margin-top: 0; 
+  margin-bottom: 1.2%;
+  text-align: left;
+  color: #444444;
+  font-size:2.5vw;
+}
+
+.card_grade_credits {
+  margin-top: 1%; 
+  margin-bottom: 1%;
+  text-align: left;
+  color: #444444;
+  font-size:2.5vw;
+}
+
+.button_desc {
+  margin-top: 1.2%;
+  font-family: 'Lato', sans-serif;
+  background-color: #FFEAA7;
+  border: solid 2px #FFC300;
+  color: #444444;
+  padding: .75vw 3vw;
+  text-align: center;
+  font-size: 2.5vw;
+  transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0.347vw;
+}
+
+.card_text {
+  font-size: 2vw;
+}
+
+.button_desc:hover {background-color: #FFC300}
+
+.grades{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;  
+  flex-direction: row;
+  column-gap: 1vw;
+}
+
+.credits {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;  
+  flex-direction: row;
+  column-gap: 1vw;
+}
+
+.filter_cards {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: solid 0.2vw #FFC300;
+  color: #005D24;
+  font-size: 2vw;
+  border-radius: 0.27vw;
+  height: 3vw;
+  width: 3vw; /** Need to fix **/
+}
+
+/****** iPhone Filter ****/
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #444444;
+  font-size: 4vw;
+}
+
+.iphone_items {
+  display: flex;
+  justify-content: stretch;
+}
+
+.filter_headers {
+  color: #444444;
+  font-size: 3.8vw;
+  margin: 1vw;
+}
+
+.checkmark { 
+  height: 3.4vw;
+  width: 3.4vw; 
+  margin-top: 5px;
+}
+.iphone_department_filters, .iphone_grade_filters, .iphone_credits_filters {
+  margin: 0 5vw 0 5vw;
+}
+
+.container {
+  margin-bottom: 0px;
+  padding-left: 45px;
+}
+.container .checkmark:after {
+  left: 1vw;
+  top:0.5vw;
+  width: 0.5vw;
+  height: 1.3vw;
+}
+
+/***** search bar iphone ****/
+
+.search_bar_div {
+  display: flex;
+  justify-content: center;
+}
+.search {
+  text-align: center;
+  font-size: 4vw; 
+}
+.search_bar {
+  float: none;
+  margin-right: 0;
+  font-size: 3vw;
+}
+
+.search_bar[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+}
+.search_bar::-webkit-search-decoration,
+.search_bar::-webkit-search-cancel-button {
+	display: none; 
+}
+.search_bar[type=search] {
+	padding: 0.625vw 0.694vw 0.625vw 32px;
+	width: 40%;
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 0.0694vw #ccc;
+	border-radius: 0.347vw;
+}
+.search_bar[type=search]:focus {
+	width: 40%;
+	background-color: #c5d7cc;
+	border-color: #005d24;	
+}
+
+.page_count {
+  font-size: 2.5vw;
+}
+
+.arrow {
+  font-size: 3vw;
+}
+
+.footer_p {
+  font-size: 2vw;
+  text-align: center;
+}
+}

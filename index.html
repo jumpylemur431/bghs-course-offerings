@@ -1,0 +1,355 @@
+<!doctype html>
+<head>
+    <title>Responsive Redesign</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="img/bg_crest.png">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header id="header">
+    <div class="logos">
+        <img class="crest" src="img/bg_crest.png" alt="Bishop Guertin High School Crest">
+        <img class="logo_w_font" src="img/bg_logo_white.png" alt="Bishop Guertin High School Logo"> 
+        <img class="menu" src="img/menu.png" alt="Menu Bar"> 
+    </div>
+  </header>
+  <div class="description">
+    <img class="classroom" src="img/classroom.jpeg" alt="Students in physics classroom at Bishop Guertin">
+    <div class="course_offerings">
+        <h1>Course Offerings</h1>
+        <p>The academic journey at Bishop Guertin begins with the ultimate goal in mind: 
+            to be prepared for college and for life. Our courses are taught with 
+            intentionality toward academic formation, quality, depth and breadth 
+            but most importantly-integrity. All our courses are college preparatory 
+            and our advanced courses mirror a college level experience. Courses at BG are not 
+            intended to “pad” a transcript but rather to fully equip the student with knowledge 
+            and understanding at their level of academic achievement.
+        </p>
+        <div class="program_button_div">
+            <button class="program_button" onclick="location.href='https://www.bghs.org/wp-content/uploads/2022/03/2223_BGHS-POS-Text_v2.pdf'"><b>Our Program of Studies</b></button>
+        </div>
+        <div class="iphone_filter" >
+            <button class="filter_button" id="iphone_filter_button"><b>Filter By</b></button>
+        </div>
+    </div>
+  </div>
+  <div id="main">
+    <article>
+        <div style="display: flex; justify-content: center;">
+            <div id="iphone_filter_div"> 
+                <div class="iphone_items">
+                    <div class="iphone_department_filters">
+                <h3 class="filter_headers">Department</h3>
+                <label class="container">Computer Science
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">English
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Fine Arts
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Health and Fitness
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Mathematics
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Science
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Social Studies
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Theology
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">World Languages
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">AP Capstone
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+                <div class="iphone_grade_filters">
+                <h3 class="filter_headers">Grade</h3>
+                <label class="container">Freshman
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Sophomore
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Junior
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Senior
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                </div>
+                <div class="iphone_credits_filters">
+                <h3 class="filter_headers">Credits</h3>
+                <label class="container">0.5
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">1
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">2
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="search_div">
+            <h2 class="search">Search by Course Keyword</h2>
+            <div class="search_bar_div">
+                <input class="search_bar" type="search" placeholder="Search">
+            </div>            
+        </div>
+        <br><br>
+        <div class="container_grid">
+            <main class="grid">
+            
+            <article>
+            <div id="back_1" class="back_card">
+                <div class="text">
+                    <h2 class="card_title">AP Computer Science A</h2>
+                    <p class="card_text">This course follows the curriculum defined by the
+                        College Board and helps students understand how
+                        computing and technology influence the world
+                        around them. It is designed for students with a broac
+                        range of interests in fields where computing is used
+                        as part of the discipline.</p>
+                    <button type="button" id="button_back_1" class="button_desc"><b>Go Back</b></button>
+                  </div>  
+            </div>
+            
+            <div id="front_1" class="front_card">
+                <div class="text">
+                  <h2 class="card_title">AP Computer Science A</h2>
+                  <h3 class="card_department_name">Department of Computer Science</h3>
+                  <div class="grades">
+                    <h4 class="card_grade_credits">Grade</h4>
+                    <div class="filter_cards">11</div>
+                    <div class="filter_cards">12</div>
+                  </div>
+                  <div class="credits">
+                    <h4 class="card_grade_credits">Credits</h4>
+                    <div class="filter_cards">1</div>
+                  </div>
+                  <button type="button" id="button_front_1" class="button_desc"><b>Show Description</b></button>
+                </div>
+                </div>
+            </article>
+
+            <article>
+            <div id="back_2" class="back_card">
+                 <div class="text">
+                     <h2 class="card_title">AP Computer Science Principles</h2>
+                     <p class="card_text">This course follows the curriculum defined by the College Board 
+                        and helps students understand how computing and technology influence the world 
+                        around them. It is designed for students with a broad range of interests in fields 
+                        where computing is used as part of the discipline.
+                     </p>
+                     <button type="button" id="button_back_2" class="button_desc"><b>Go Back</b></button>
+                   </div>
+                </div>
+
+            <div id="front_2" class="front_card">
+                <div class="text">
+                    <h2 class="card_title">AP Computer Science Principles</h2>
+                    <h3 class="card_department_name">Department of Computer Science</h3>
+                    <div class="grades">
+                      <h4 class="card_grade_credits">Grade</h4>
+                      <div class="filter_cards">10</div>
+                      <div class="filter_cards">11</div>
+                      <div class="filter_cards">12</div>
+                    </div>
+                    <div class="credits">
+                      <h4 class="card_grade_credits">Credits</h4>
+                      <div class="filter_cards">1</div>
+                    </div>
+                    <button type="button" id="button_front_2" class="button_desc"><b>Show Description</b></button>
+                </div>
+            </div>
+            </article>
+            
+            <article>
+                <div id="back_3" class="back_card">
+                    <div class="text">
+                        <h2 class="card_title">Yearbook</h2>
+                        <p class="card_text">While the primary objective of the yearbook class is to 
+                            produce the annual school publication, students will gain much more, such 
+                            as teamwork, responsibility, brainstorming, writing headlines and captions, 
+                            editing, typography, design, graphics, advertising, and distribution.
+                        </p>
+                        <button type="button" id="button_back_3" class="button_desc"><b>Go Back</b></button>
+                      </div>
+                   </div>
+
+                <div id="front_3" class="front_card">
+                    <div class="text">
+                        <h2 class="card_title">Yearbook</h2>
+                        <h3 class="card_department_name">Department of Computer Science</h3>
+                        <div class="grades">
+                          <h4 class="card_grade_credits">Grade</h4>
+                          <div class="filter_cards">10</div>
+                          <div class="filter_cards">11</div>
+                          <div class="filter_cards">12</div>
+                        </div>
+                        <div class="credits">
+                          <h4 class="card_grade_credits">Credits</h4>
+                          <div class="filter_cards">1</div>
+                        </div>
+                        <button type="button" id="button_front_3" class="button_desc"><b>Show Description</b></button>
+                    </div>
+                </div>
+                
+            </article>
+              
+            <article>
+                <div id="back_4" class="back_card">
+                    <div class="text">
+                        <h2 class="card_title">AP Physics C</h2>
+                        <p class="card_text">This course forms the college sequence that serves as the 
+                            foundation in physics for students planning on majoring in the physical 
+                            sciences or engineering. The subject matter of the course is classical 
+                            mechanics as well as the classical study of electricity and magnetism. 
+                        </p>
+                        <button type="button" id="button_back_4" class="button_desc"><b>Go Back</b></button>
+                    </div>
+                </div>
+
+                <div id="front_4" class="front_card">
+                    <div class="text">
+                        <h2 class="card_title">AP Physics C</h2>
+                        <h3 class="card_department_name">Department of Science</h3>
+                        <div class="grades">
+                          <h4 class="card_grade_credits">Grade</h4>
+                          <div class="filter_cards">12</div>
+                        </div>
+                        <div class="credits">
+                          <h4 class="card_grade_credits">Credits</h4>
+                          <div class="filter_cards">1</div>
+                        </div>
+                        <button type="button" id="button_front_4" class="button_desc"><b>Show Description</b></button>
+                    </div>
+                </div>
+            </article>  
+        </main>
+        </div>
+        <br>
+        <div class="empty_iphone_space">
+            <br><br><br><br><br>
+        </div>
+        <div class="pages_div">
+            <div class="arrow_display">
+                <p class="page_count">Page 1 of 3</p>
+                <a href="#" class="arrow">&#8250;</a>  
+            </div>
+        </div>
+    </article>
+    <nav>
+        <h2 class="filter">Filter By</h2>
+        <div class="filter_options_div"> 
+            <h3 class="filter_headers">Department</h3>
+            <label class="container">Computer Science
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">English
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Fine Arts
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Health and Fitness
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Mathematics
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Science
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Social Studies
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Theology
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">World Languages
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">AP Capstone
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <h3 class="filter_headers">Grade</h3>
+            <label class="container">Freshman
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Sophomore
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Junior
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Senior
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <h3 class="filter_headers">Credits</h3>
+            <label class="container">0.5
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">1
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">2
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </nav>
+  </div>
+  <footer>
+    <div class="footer_div">
+        <p class="footer_p">194 Lund Road Nashua, NH 03060 | Phone: (603) 889-4107 | Main Office Fax: (603) 966-4381 | Counseling Fax: (603) 889-0701 | Athletics Fax: (603) 966-4382</p>
+    </div>
+
+  </footer>
+  <script src="home.js"></script>
+</body>
